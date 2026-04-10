@@ -1,0 +1,49 @@
+# =========================
+# Secrets & Credentials (CRITICAL)
+# =========================
+.env
+*.pem
+*.key
+secrets.json
+aws_credentials.ini
+credentials.xml
+
+# =========================
+# Python & AI/ML Models
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.pytest_cache/
+
+# Ignore large model weights and datasets
+*.pkl
+*.h5
+*.pt
+*.pth
+large_datasets/
+
+
+# =========================
+# Data & Logs (SIEM Baseline)
+# =========================
+# Ignore all general log files to prevent uploading massive SOC data drops
+*.log
+
+# EXCEPTIONS: Force Git to track the specific sample logs needed for your grading rubric
+!evidence/baseline_logs/*.log
+
+# Ignore large packet captures or local databases unless specifically needed
+*.pcap
+*.sqlite3
+
+# =========================
+# OS Generated Files
+# =========================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
