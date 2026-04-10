@@ -1,0 +1,6 @@
+Threat Scenario,Likelihood,Impact,Overall Risk Rating
+Phishing / Initial Endpoint Compromise,High,Medium,High
+Ransomware Execution on DBMS,Low,Critical,High
+Lateral Movement to Jump Host,Medium,High,High
+Alert Fatigue leading to Missed APT,High,High,Critical
+Data Loss via App Persistence Bug,High,Medium,High
