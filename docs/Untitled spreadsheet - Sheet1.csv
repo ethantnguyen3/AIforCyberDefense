@@ -1,0 +1,10 @@
+Asset ID,Asset Name,Asset Type,Function,Network Segment,Criticality
+AST-01,Customer Records Database,DBMS,Relational database storing PII and financial transactions.,Secure Database VLAN,Critical
+AST-02,Frontend App,Application,The frontend application used by clients to interface with their accounts.,External / Public,High
+AST-03,Core API Gateway,Web Server,The bridge processes HTTPS requests between the mobile app and the backend database.,DMZ (Demilitarized Zone),High
+AST-04,Core Routing Switch,Network Device,Internal switch utilizing ACLs to restrict lateral movement between the DMZ and the Database VLAN.,Internal Infrastructure,Critical
+AST-05,AI Anomaly Detection Sensor,Security Tool,The ML-driven network sensor monitoring traffic flow for behavioral deviations.,Spans All VLANs,High
+AST-06,Administrator Workstations,Endpoint,Laptops used by IT staff to manage the database and network configurations.,Internal Staff VLAN,Medium
+AST-07,3560 Layer 3 Switch,Network Device,Routes traffic and enforces default-deny Access Control Lists (ACLs) between the DMZ and internal VLANS.,Internal Infrastructure,Critical
+AST-08,Admin Jump Host,Endpoint / Server,Hardened intermediary server that IT staff must authenticate through to access the Database VLAN.,Internal Staff VLAN,High
+AST-09,Local App Storage,Storage,Client-side storage caching sales and expense records on the user's Android device before syncing.,External / Endpoint,Medium
