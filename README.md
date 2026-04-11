@@ -6,6 +6,7 @@ We are designing and proposing a theoretical AI-driven Security Operations Cente
 
 AIforCyberDefense/
 │
+
 ├── .gitignore  
 ├── README.md  
 │
