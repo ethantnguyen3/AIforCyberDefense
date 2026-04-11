@@ -1,6 +1,9 @@
-Threat Scenario,Likelihood,Impact,Overall Risk Rating
-Phishing / Initial Endpoint Compromise,High,Medium,High
-Ransomware Execution on DBMS,Low,Critical,High
-Lateral Movement to Jump Host,Medium,High,High
-Alert Fatigue leading to Missed APT,High,High,Critical
-Data Loss via App Persistence Bug,High,Medium,High
+Threat Scenario,Affected Asset(s),Likelihood,Impact,Overall Risk Rating,Notes
+Phishing and Initial Endpoint Compromise,Employee Endpoints; User Accounts,High,Medium,High,Most likely initial access vector through email or social engineering
+Ransomware Execution on DBMS,Customer Records Database (AST-01),Low,Critical,High,Less frequent than phishing but severe if database availability is lost
+Lateral Movement to Jump Host,Internal Routing Infrastructure; Jump Host,Medium,High,High,Possible if segmentation or ACLs are too permissive
+Alert Fatigue Leading to Missed Advanced Threat Activity,SOC Analysts; SIEM Monitoring Workflow,High,High,Critical,High alert volume may cause delayed detection of multi-stage attacks
+Data Loss through Application Persistence Bug,Client Application; Local Storage; Backend Records,High,Medium,High,Known baseline weakness that may cause record disappearance or corruption
+Credential Theft and Privilege Escalation,IT Administrator Account (AST-06); Active Directory,Medium,Critical,High,Compromise of privileged accounts would significantly expand attacker access
+Malformed API Input Causing Data Integrity Loss,Core API Gateway; Customer Records Database,Medium,High,High,Weak validation could allow tampered or malformed financial records
+Unauthorized Internal Network Access,3560 Layer 3 Switch; Internal Network Segments,Medium,High,High,Improper routing or ACL enforcement may allow attacker pivoting
