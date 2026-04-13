@@ -1,0 +1,23 @@
+Current Detection Capability: POOR
+- Phishing→Malware chain: UNDETECTED (4+ hour dwell time)
+- Lateral movement: UNDETECTED (scanning not correlated)
+- Data exfiltration: DETECTED but too slow (2+ minute delay)
+
+Current Vulnerabilities: CRITICAL
+- Data persistence bug (app data lost on crash)
+- API validation weak (SQL injection possible)
+- Rate limiting missing (enumeration attacks possible)
+- Tokens never expire (stolen tokens = permanent access)
+- IDOR vulnerability (any authenticated user can access others' data)
+
+Estimated Risk: CRITICAL
+- Ransomware success probability: ~45%
+- Data breach success probability: ~65%
+- Undetected dwell time: 18-24 hours
+
+This baseline justifies your planned controls:
+✓ AI Anomaly Detection (correlate multi-stage attacks)
+✓ SOAR Playbooks (automated containment)
+✓ Default-Deny ACLs (prevent lateral movement)
+✓ Jump Host Restrictions (prevent privilege escalation)
+✓ Application Remediation (fix persistence bug, add validation)
