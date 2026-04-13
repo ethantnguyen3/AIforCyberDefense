@@ -1,0 +1,20 @@
+SIEM Alert Sample (Week 1):
+[2024-01-15 09:45:00] PHISHING EMAIL RECEIVED
+  Source: external@malicious.com
+  Subject: "Urgent Account Update Required"
+  Result: UNDETECTED (No correlation engine)
+
+[2024-01-15 09:47:00] MALWARE EXECUTION
+  Process: powershell.exe spawned from email attachment
+  Command: Connect to C2 server (185.220.100.45:443)
+  Result: UNDETECTED (No process chain analysis)
+
+[2024-01-15 10:05:00] PERSISTENCE ESTABLISHED
+  Scheduled task created: "Windows Update Check" (runs every 2 hours)
+  Result: UNDETECTED (No behavioral baselining)
+
+Alert Summary: 487 alerts generated in 7 days
+- Reviewed: 143 (29%)
+- Unreviewed: 344 (71%)
+- False positives: 89 (62% of reviewed)
+- True positives: 4 (0.8% of total)
