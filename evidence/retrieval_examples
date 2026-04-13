@@ -1,0 +1,69 @@
+DATABASE QUERY RETRIEVALS
+Query 1: Customer Records Retrieval
+SQL: SELECT * FROM customer_records WHERE id = 1234;
+ 
+Retrieved Data:
+{
+  "customer_id": 1234,
+  "name": "John Doe",
+  "email": "john.doe@company.com",
+  "ssn": "123-45-6789",
+  "phone": "555-1234",
+  "address": "123 Main St, Kansas City, MO",
+  "account_balance": 150000,
+  "transaction_history": [
+    {"date": "2024-01-15", "amount": 5000, "type": "transfer"},
+    {"date": "2024-01-14", "amount": 250, "type": "purchase"}
+  ]
+}
+ 
+Risk: Entire record exposed. No row-level filtering.
+
+------------------------------------------------------------------
+
+Query 2: Admin Accessing All Financial Data
+SQL: SELECT customer_id, amount, transaction_type FROM sales_records;
+ 
+Retrieved Data: 2.5M+ customer records with financial amounts
+Sample:
+customer_id | amount | type
+1001        | 10000  | expense
+1002        | 25000  | sale
+1003        | 5000   | transfer
+...
+2500000     | 150000 | sale
+ 
+Risk: No audit trail. Admin can export entire database.
+
+--------------------------------------------------------------------
+
+Query 3 API REQUEST/RESPONSE RETRIEVALS
+ 
+API Call 1: Get Customer Records via Mobile App
+Request:
+GET /api/customer/records?customer_id=1234
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+ 
+Response:
+HTTP/1.1 200 OK
+{
+  "status": "success",
+  "records": [
+    {
+      "id": 1,
+      "customer_id": 1234,
+      "amount": 5000,
+      "date": "2024-01-15",
+      "description": "Wire transfer"
+    },
+    {
+      "id": 2,
+      "customer_id": 1234,
+      "amount": 250,
+      "date": "2024-01-14",
+      "description": "Purchase"
+    }
+  ]
+}
+ 
+Risk: No authorization check. Any authenticated user can change customer_id parameter.
