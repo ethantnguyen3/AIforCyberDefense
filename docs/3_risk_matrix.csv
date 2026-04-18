@@ -1,9 +1,7 @@
-Threat Scenario,Affected Asset(s),Likelihood,Impact,Overall Risk Rating,Notes
-Phishing and Initial Endpoint Compromise,Employee Endpoints; User Accounts,High,Medium,High,Most likely initial access vector through email or social engineering
-Ransomware Execution on DBMS,Customer Records Database (AST-01),Low,Critical,High,Less frequent than phishing but severe if database availability is lost
-Lateral Movement to Jump Host,Internal Routing Infrastructure; Jump Host,Medium,High,High,Possible if segmentation or ACLs are too permissive
-Alert Fatigue Leading to Missed Advanced Threat Activity,SOC Analysts; SIEM Monitoring Workflow,High,High,Critical,High alert volume may cause delayed detection of multi-stage attacks
-Data Loss through Application Persistence Bug,Client Application; Local Storage; Backend Records,High,Medium,High,Known baseline weakness that may cause record disappearance or corruption
-Credential Theft and Privilege Escalation,IT Administrator Account (AST-06); Active Directory,Medium,Critical,High,Compromise of privileged accounts would significantly expand attacker access
-Malformed API Input Causing Data Integrity Loss,Core API Gateway; Customer Records Database,Medium,High,High,Weak validation could allow tampered or malformed financial records
-Unauthorized Internal Network Access,3560 Layer 3 Switch; Internal Network Segments,Medium,High,High,Improper routing or ACL enforcement may allow attacker pivoting
+Threat Scenario,Baseline Risk,Control Added,Residual Likelihood,Residual Impact,Residual Risk,Notes
+Alert fatigue causes missed multi-stage attack,Critical,Secure prompt template + analyst checklist + logging,Medium,High,High,Improved review workflow reduces missed correlation risk
+Privilege escalation from excessive permissions,High,Least-privilege access design,Medium,High,Medium,Access scope reduced by role separation
+Lateral movement to jump host,High,Least-privilege matrix + restricted admin access,Low,High,Medium,Jump host exposure reduced
+Unsafe or overconfident AI recommendations,High,Guardrails + structured analyst review,Medium,Medium,Medium,Outputs are more constrained and evidence-based
+Irrelevant or risky retrieval context,High,Retrieval hardening,Medium,Medium,Medium,Reduced context exposure and improved relevance
+Weak audit trail during incident response,Medium,Logging and traceability design,Low,Medium,Low,Improved accountability and reconstruction
