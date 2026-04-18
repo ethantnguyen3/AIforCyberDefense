@@ -12,9 +12,9 @@ This submission includes:
 - validation evidence and before/after comparisons
 - updated risk register
 - draft outline of the final report
-
 ## Repository Structure
-##text
+
+```text
 AIforCyberDefense/
 ├── .gitignore
 ├── README.md
