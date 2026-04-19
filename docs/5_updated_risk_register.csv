@@ -1,4 +1,3 @@
-
 Threat Scenario,Baseline Risk,Control Added,Residual Likelihood,Residual Impact,Residual Risk,Notes
 Alert fatigue causes missed multi-stage attack,Critical,Secure prompt template + analyst checklist + logging,Medium,High,High,Improved review workflow reduces missed correlation risk
 Privilege escalation from excessive permissions,High,Least-privilege access design,Medium,High,Medium,Access scope reduced by role separation
