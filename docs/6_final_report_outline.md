@@ -1,4 +1,3 @@
-
 # Final Report Outline
 
 ## 1. Introduction
