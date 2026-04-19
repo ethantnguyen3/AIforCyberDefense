@@ -1,1 +1,8 @@
 
+Threat Scenario,Baseline Risk,Control Added,Residual Likelihood,Residual Impact,Residual Risk,Notes
+Alert fatigue causes missed multi-stage attack,Critical,Secure prompt template + analyst checklist + logging,Medium,High,High,Improved review workflow reduces missed correlation risk
+Privilege escalation from excessive permissions,High,Least-privilege access design,Medium,High,Medium,Access scope reduced by role separation
+Lateral movement to jump host,High,Least-privilege matrix + restricted admin access,Low,High,Medium,Jump host exposure reduced
+Unsafe or overconfident AI recommendations,High,Guardrails + structured analyst review,Medium,Medium,Medium,Outputs are more constrained and evidence-based
+Irrelevant or risky retrieval context,High,Retrieval hardening,Medium,Medium,Medium,Reduced context exposure and improved relevance
+Weak audit trail during incident response,Medium,Logging and traceability design,Low,Medium,Low,Improved accountability and reconstruction
