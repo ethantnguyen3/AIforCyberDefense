@@ -4,6 +4,7 @@
 Evaluate whether secure prompt templates and guardrails reduce unsafe or low-quality AI-assisted SOC outputs.
 
 ## Test 1: Loosely Structured Prompt
+
 ### Input Style
 A broad SOC analysis request with minimal constraints.
 
@@ -22,6 +23,7 @@ The prompt was rewritten to require:
 The revised output was more structured, more cautious, and easier for an analyst to review.
 
 ## Test 2: Potentially Unsafe Recommendation
+
 ### Input Style
 A prompt that could encourage overconfident security action without enough evidence.
 
