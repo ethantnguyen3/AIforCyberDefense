@@ -12,6 +12,42 @@ This submission includes:
 - validation evidence and before/after comparisons
 - updated risk register
 - draft outline of the final report
+
+## Quick Run
+
+From the repository root:
+
+```powershell
+c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py all
+```
+
+Other modes:
+
+```powershell
+c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py tests
+c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py metrics
+c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py pipeline
+```
+
+Pipeline mode also accepts optional input values:
+
+```powershell
+c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py pipeline --role analyst --action triage_alert --input "Summarize suspicious activity for host B"
+``` 
+
+## Other Runs 
+
+
+1. Run the control test suite
+```python.exe -m unittest discover -s tests -p "test_*.py"```
+
+2. Run baseline vs after-controls metrics
+```python.exe compare.py```
+
+3. Quick live pipeline check
+```python.exe -c "import sys;sys.path.insert(0,'src');from controls.defensive_pipeline import run_defensive_pipeline;r=run_defensive_pipeline('Summarize suspicious login telemetry from host A','analyst','triage_alert');print(r.policy.decision.value);print(r.response_text);print(r.log_entry['traceability_complete'])"```
+
+Note: access_control.py is a module (library code), so it is not meant to be run directly as a standalone app.
 ## Repository Structure
 
 ```text
