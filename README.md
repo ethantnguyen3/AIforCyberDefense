@@ -56,21 +56,49 @@ Note: access_control.py is a module (library code), so it is not meant to be run
 AIforCyberDefense/
 ├── .gitignore
 ├── README.md
+├── run_demo.py
+├── compare.py
+│
 ├── docs/
 │   ├── 1_threat_model.md
 │   ├── 2_asset_inventory.csv
 │   ├── 3_baseline_risk_matrix.csv
 │   ├── 4_control_implementation_summary.md
 │   ├── 5_updated_risk_register.csv
-│   └── 6_final_report_outline.md
+│   ├── 6_final_report_outline.md
+│   ├── final_recommendations.md
+│   └── residual_risk_discussion.md
+│
 ├── evidence/
+│   ├── evidence_appendix.md
 │   ├── before_after_comparison.md
 │   ├── validation_test_table.md
-│   ├── least_privilege_matrix.md
 │   ├── guardrail_test_results.md
-│   ├── logging_traceability_design.md
-│   └── retrieval_hardening_results.md
-└── src/
-    ├── soar_playbooks/
-    ├── ai_prompts_and_models/
-    └── network_configs/
+│   ├── retrieval_hardening_results.md
+│   ├── least_privilege_matrix.md
+│   └── logging_traceability_design.md
+│
+├── eval/
+│   ├── baseline_results.csv
+│   ├── controlled_results.csv
+│   └── compare.py
+│
+├── src/
+│   ├── controls/
+│   │   ├── defensive_pipeline.py
+│   │   ├── input_filter.py
+│   │   ├── output_validator.py
+│   │   ├── policy_engine.py
+│   │   └── logging_schema.py
+│   │
+│   ├── soar_playbooks/
+│   ├── ai_prompts_and_models/
+│   └── network_configs/
+│
+├── tests/
+│   └── test_controls.py
+│
+└── final_submission/
+    ├── README.md
+    ├── AIforCyberDefense_Final_Report.pdf
+    └── AIforCyberDefense_Final_Slide_Deck.pptx
