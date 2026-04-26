@@ -3,16 +3,18 @@
 ## Objective
 This project designs and proposes a theoretical AI-driven Security Operations Center (SOC) framework that reduces analyst alert fatigue and improves detection of stealthy, multi-stage attacks across an enterprise network. The goal is to show how machine learning can help shift security operations from a reactive approach, where analysts manually review isolated alerts, to a proactive approach, where AI correlates endpoint, network, and user activity to detect and contain threats before serious damage or data exfiltration occurs.
 
-## Checkpoint 3 Focus
+## Final Checkpoint Focus
 
-This checkpoint shows defensive progress beyond baseline analysis. The team selected, implemented, simulated, or formally evaluated defensive controls for the proposed AI-driven SOC framework.
+This final checkpoint contains the complete technical and written package for the AI-driven SOC framework project.
 
 This submission includes:
-- control implementation and evaluation summary
-- validation evidence and before/after comparisons
-- updated risk register
-- draft outline of the final report
-
+- final report
+- final slide deck
+- complete evidence appendix
+- final validation summary
+- final recommendations
+- residual risk discussion
+- finalized GitHub repository
 ## Quick Run
 
 From the repository root:
