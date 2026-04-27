@@ -6,74 +6,51 @@ This project designs and proposes a theoretical AI-driven Security Operations Ce
 ## Final Checkpoint Focus
 
 This final checkpoint contains the complete technical and written package for the AI-driven SOC framework project.
-
-This submission includes:
 - final report
 - final slide deck
 - complete evidence appendix
 - final validation summary
 - final recommendations
 - residual risk discussion
-- finalized GitHub repository
-## Quick Run
-
-From the repository root:
-
-```powershell
 c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py all
-```
+│   ├── residual_risk_discussion.md
+│   └── validation_evidence.md
 
-Other modes:
+│   ├── evidence_appendex.md
 
-```powershell
 c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py tests
-c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py metrics
-c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py pipeline
 ```
 
-Pipeline mode also accepts optional input values:
-
-```powershell
-c:/Users/ethan/Downloads/AIforCyberDefense/.venv/Scripts/python.exe run_demo.py pipeline --role analyst --action triage_alert --input "Summarize suspicious activity for host B"
-``` 
-
-## Other Runs 
-
-
-1. Run the control test suite
-```python.exe -m unittest discover -s tests -p "test_*.py"```
-
-2. Run baseline vs after-controls metrics
-```python.exe compare.py```
-
-3. Quick live pipeline check
-```python.exe -c "import sys;sys.path.insert(0,'src');from controls.defensive_pipeline import run_defensive_pipeline;r=run_defensive_pipeline('Summarize suspicious login telemetry from host A','analyst','triage_alert');print(r.policy.decision.value);print(r.response_text);print(r.log_entry['traceability_complete'])"```
-
-Note: access_control.py is a module (library code), so it is not meant to be run directly as a standalone app.
-## Repository Structure
-
-```text
-AIforCyberDefense/
-├── .gitignore
-├── README.md
-├── run_demo.py
-├── compare.py
-│
-├── docs/
-│   ├── 1_threat_model.md
-│   ├── 2_asset_inventory.csv
-│   ├── 3_baseline_risk_matrix.csv
-│   ├── 4_control_implementation_summary.md
-│   ├── 5_updated_risk_register.csv
-│   ├── 6_final_report_outline.md
+│   ├── retrieval_hardening_results.md
+│   └── validation_test_table.md
+├── eval/
+│   ├── baseline_results.csv
+│   ├── controlled_results.csv
+│   └── compare.py
+├── final_submission/
+│   ├── AIforCyberDefense_Final_Report.docx (1).pdf
+│   ├── README.md
+│   ├── final_recommendations.md
+│   └── final_validation_summary.md
+├── src/
+│   ├── controls/
+│   ├── soar_playbooks/
+│   ├── ai_prompts_and_models/
+│   └── network_configs/
+└── tests/
+    └── test_controls.py
 │   ├── final_recommendations.md
 │   └── residual_risk_discussion.md
 │
+=======
+│   └── final_report_outline.md
+>>>>>>> 5795b63 (Finalize submission docs and normalize file names)
 ├── evidence/
 │   ├── evidence_appendix.md
 │   ├── before_after_comparison.md
 │   ├── validation_test_table.md
 │   ├── guardrail_test_results.md
+<<<<<<< HEAD
 │   ├── retrieval_hardening_results.md
 │   ├── least_privilege_matrix.md
 │   └── logging_traceability_design.md
@@ -102,3 +79,14 @@ AIforCyberDefense/
     ├── README.md
     ├── AIforCyberDefense_Final_Report.pdf
     └── AIforCyberDefense_Final_Slide_Deck.pptx
+=======
+│   ├── logging_traceability_design.md
+│   └── retrieval_hardening_results.md
+├── final_submission/
+│   ├── final_validation_summary.md
+│   └── final_recommendations.md
+└── src/
+    ├── soar_playbooks/
+    ├── ai_prompts_and_models/
+    └── network_configs/
+>>>>>>> 5795b63 (Finalize submission docs and normalize file names)

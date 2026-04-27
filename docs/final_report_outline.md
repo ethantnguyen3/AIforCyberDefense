@@ -1,41 +1,51 @@
 # Final Report Outline
 
-## 1. Problem framing and threat model
-- SOC pain points addressed by AI-assisted triage
-- Threat actor goals and attack surfaces
-- Baseline assumptions and constraints
+## 1. Introduction
+- Project objective and security problem framing
+- Why an AI-driven SOC framework matters
+- Baseline assumptions and operating constraints
 
-## 2. Baseline system and risks
-- Baseline architecture and workflow
-- Initial risk profile and critical threat scenarios
-- Baseline measured performance and security gaps
+## 2. Threat model and important assets
+- Threat actor goals, misuse cases, and attack surfaces
+- Important assets and trust boundaries
+- Baseline threat scenarios and likely impacts
 
-## 3. Selected controls and rationale
+## 3. Baseline architecture and risk profile
+- Baseline SOC workflow and identified security gaps
+- Initial risk ratings and high-priority concerns
+- Why defensive improvements were required
+
+## 4. Selected defensive controls and rationale
 - Control selection method and prioritization criteria
-- Risk-to-control mapping
+- Risk-to-control mapping for each high-priority risk
 - Tradeoffs accepted during control selection
 
-## 4. Implementation details
+## 5. Implementation details
 - Defensive pipeline architecture (input, policy, guardrails, output, logging)
-- Role-based policy enforcement and least-privilege model
+- Role-based access enforcement and least-privilege design
 - Logging schema and reason-code taxonomy
 
-## 5. Validation methodology
-- Test design: adversarial and benign sets
-- Baseline versus controlled evaluation workflow
+## 6. Validation process
+- Test design (adversarial and benign scenarios)
+- Baseline-versus-controlled evaluation workflow
 - Measurement definitions and reproducibility notes
 
-## 6. Before/after results
+## 7. Results and before/after comparison
 - Metric comparison table and deltas
-- Interpreted findings and effect size discussion
+- Interpreted findings and practical impact discussion
 - Case-level examples of blocked and mitigated behavior
 
-## 7. Risk revisions and residual risk
-- Updated risk register with residual likelihood/impact
+## 8. Updated risk register and residual risk discussion
+- Residual likelihood and impact by risk category
 - Risks materially reduced versus partially reduced
-- Control gaps and dependence on assumptions
+- Remaining unresolved issues and dependency assumptions
 
-## 8. Limitations and next steps
-- Current limitations (pattern coverage, semantic blind spots)
-- Planned enhancements (semantic checks, larger test corpus)
+## 9. Limitations
+- Current control limitations and blind spots
+- Areas that are simulated rather than production-operationalized
+- Scope boundaries for this project phase
+
+## 10. Final recommendations and conclusion
+- Prioritized recommendations for the next mitigation cycle
 - Operationalization path for production SOC deployment
+- Final conclusion on defensive progress and remaining work
